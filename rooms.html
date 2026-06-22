@@ -9,9 +9,9 @@
     <meta property="og:description" content="Explore rooms at Natah Shanti Homestay Ubud." />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body data-whatsapp-phone="">
+  <body data-whatsapp-phone="6287817801809">
     <script>
-      document.documentElement.setAttribute("data-whatsapp-phone", "");
+      document.documentElement.setAttribute("data-whatsapp-phone", "6287817801809");
     </script>
 
     <header class="site-header">
@@ -118,51 +118,15 @@
                 <img loading="lazy" alt="Garden Room" src="assets/images/rooms/room-1.jpg" onerror="this.style.display = 'none'" />
               </div>
               <div class="card-body">
-                <h3>Garden Room</h3>
+                <h3>Superior Room</h3>
                 <div class="meta-row">
-                  <span class="pill">24 m²</span>
-                  <span class="pill">Queen Bed</span>
+                  <span class="pill">9 m²</span>
+                  <span class="pill">King Bed</span>
                   <span class="pill">Up to 2 guests</span>
                 </div>
                 <div style="color: var(--muted); font-size: 13px; margin: 8px 0 12px">Amenities: Air Conditioning, Private Bathroom, Garden View.</div>
                 <div class="card-actions">
                   <button class="btn btn-forest" type="button" data-book-now data-room="Garden Room">Book Now</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media">
-                <img loading="lazy" alt="Suite with Balcony" src="assets/images/rooms/room-2.jpg" onerror="this.style.display = 'none'" />
-              </div>
-              <div class="card-body">
-                <h3>Suite with Balcony</h3>
-                <div class="meta-row">
-                  <span class="pill">32 m²</span>
-                  <span class="pill">King Bed</span>
-                  <span class="pill">Up to 3 guests</span>
-                </div>
-                <div style="color: var(--muted); font-size: 13px; margin: 8px 0 12px">Amenities: Free WiFi, Air Conditioning, Breakfast Service.</div>
-                <div class="card-actions">
-                  <button class="btn btn-forest" type="button" data-book-now data-room="Suite with Balcony">Book Now</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media">
-                <img loading="lazy" alt="Private Villa Room" src="assets/images/rooms/room-3.jpg" onerror="this.style.display = 'none'" />
-              </div>
-              <div class="card-body">
-                <h3>Private Villa Room</h3>
-                <div class="meta-row">
-                  <span class="pill">45 m²</span>
-                  <span class="pill">King Bed</span>
-                  <span class="pill">Up to 4 guests</span>
-                </div>
-                <div style="color: var(--muted); font-size: 13px; margin: 8px 0 12px">Amenities: Private Bathroom, Garden View, Daily Housekeeping.</div>
-                <div class="card-actions">
-                  <button class="btn btn-forest" type="button" data-book-now data-room="Private Villa Room">Book Now</button>
                 </div>
               </div>
             </article>
@@ -200,7 +164,7 @@
 
     <!-- Sticky Book Now + WhatsApp -->
     <div class="sticky-book" aria-label="Quick booking actions">
-      <a class="fab" data-whatsapp-btn data-wa-message="Hi! I want to book a room at Natah Shanti Homestay Ubud." aria-label="WhatsApp booking">
+      <a class="fab" data-whatsapp-btn data-wa-message="Hi! I want to book a room at Natah Shanti Homestay Ubud." aria-label="WhatsApp booking" href="https://wa.me/6287817801809">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(11,11,11,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20.05 15.05a7.5 7.5 0 0 1-9.95 1.5L4 20l3.45-5.1a7.5 7.5 0 1 1 12.6.15Z"></path>
         </svg>
@@ -228,6 +192,8 @@
           <div style="font-weight: 900; color: var(--brand-forest); margin-bottom: 10px">Room: <span data-book-room>—</span></div>
           <form class="form" data-book-form>
             <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" /></div>
+
             <div class="field">
               <label for="guests">Guests</label
               ><select id="guests" name="guests" required>
@@ -239,8 +205,14 @@
             </div>
             <div class="field"><label for="checkin">Check-in</label><input id="checkin" name="checkin" type="date" required /></div>
             <div class="field"><label for="checkout">Check-out</label><input id="checkout" name="checkout" type="date" required /></div>
-            <div class="field" style="grid-column: 1/-1"><label for="note">Note (optional)</label><textarea id="note" name="note" placeholder="Any preferences or questions?"></textarea></div>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Send via WhatsApp</button><a class="btn btn-forest" href="contact.html">Contact details</a></div>
+            <div class="field" style="grid-column: 1/-1">
+              <label for="note">Note (optional)</label>
+              <textarea id="note" name="note" placeholder="Any preferences or questions?"></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
+              <a class="btn btn-forest" href="mailto:madededi539@gmail.com">Send Via Email</a>
+            </div>
           </form>
         </div>
       </div>
@@ -273,9 +245,9 @@
           <div>
             <h3>Contact</h3>
             <p style="margin: 0; display: flex; flex-direction: column; gap: 8px">
-              <span>Email: hello@natahshanti.com</span>
-              <span>Phone: +62 000-000-000</span>
-              <span>WhatsApp: +62 000-000-000</span>
+              <span>Email: madededi539@gmail.com</span>
+              <span>Phone: +62 878-1780-1809</span>
+              <span>WhatsApp: +62 878-1780-1809</span>
             </p>
           </div>
           <div>

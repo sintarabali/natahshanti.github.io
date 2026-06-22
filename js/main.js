@@ -216,7 +216,8 @@
 
   // WhatsApp link generator
   function getWhatsAppLink(message) {
-    const phone = document.documentElement.getAttribute("data-whatsapp-phone") || "";
+    // Accept from <html> (preferred) or fallback to <body> if provided there
+    const phone = document.documentElement.getAttribute("data-whatsapp-phone") || document.body?.getAttribute("data-whatsapp-phone") || "";
     // Use wa.me format; message URL-encoded
     if (!phone) return "#";
     const txt = encodeURIComponent(message || "Hello Natah Shanti Homestay Ubud, I would like to book a stay.");
@@ -246,10 +247,25 @@
       const checkOut = fd.get("checkout") || "";
       const guests = fd.get("guests") || "";
       const name = fd.get("name") || "";
+      const email = fd.get("email") || "";
 
-      const message = `Hello Natah Shanti Homestay Ubud${room ? ` - ${room}` : ""}!%0A` + `I would like to book:%0A` + `Check-in: ${checkIn}%0A` + `Check-out: ${checkOut}%0A` + `Guests: ${guests}%0A` + `Name: ${name}%0A` + `Thank you!`;
+      const note = fd.get("note") || "";
+
+      const NOTE_TEXT = `Note:%0A`;
+
+      const baseMessage =
+        `Hello Natah Shanti Homestay Ubud${room ? ` - ${room}` : ""}!%0A` +
+        `I would like to book:%0A` +
+        `Check-in: ${checkIn}%0A` +
+        `Check-out: ${checkOut}%0A` +
+        `Guests: ${guests}%0A` +
+        `Name: ${name}%0A` +
+        (email ? `Email: ${email}%0A` : "");
+
+      const message = baseMessage + (note ? NOTE_TEXT + `${note}`.replace(/\r?\n/g, "%0A") + "%0A" : "") + `Thank you!`;
 
       const phoneLink = document.documentElement.getAttribute("data-whatsapp-phone") || "";
+
       if (!phoneLink) return alert("WhatsApp phone number not set.");
       const url = `https://wa.me/${phoneLink}?text=${encodeURIComponent(decodeURIComponent(message))}`;
       window.open(url, "_blank");
