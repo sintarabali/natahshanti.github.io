@@ -453,7 +453,13 @@ main {
   border: 1px solid rgba(98, 43, 20, 0.1);
   border-radius: var(--radius);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
+
 .icon-top {
   display: flex;
   align-items: center;
